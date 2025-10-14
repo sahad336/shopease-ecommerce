@@ -1,0 +1,20 @@
+.link{
+  text-decoration: none;
+  color: black;
+}
+
+.image{
+  object-fit: contain;
+  height: 350px;
+}
+
+.seeAll {
+  text-decoration: none;
+  color: #0d6efd;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.seeAll:hover {
+  color: #0a58ca;
+}

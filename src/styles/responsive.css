@@ -1,0 +1,266 @@
+/* =========================
+   Global Styles
+========================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+.container, .container1 {
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.3rem; }
+}
+
+/* =========================
+   Navigation
+========================= */
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  flex-wrap: wrap;
+  background: linear-gradient(90deg, #0d6efd, #6610f2);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navBar ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.navBar .link {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  position: relative;
+}
+
+.navBar .link:hover,
+.navBar .active {
+  color: #ffd700;
+}
+
+/* Dropdown Menu */
+.navBar .dropdown {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: white;
+  color: black;
+  display: none;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+  min-width: 150px;
+  z-index: 100;
+}
+
+.navBar .link:hover .dropdown {
+  display: flex;
+}
+
+.dropdownList {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dropdownList:hover {
+  background: #f1f1f1;
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+  .navBar ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .navBar .title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+}
+
+/* =========================
+   Carousel
+========================= */
+.carousel-item img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .carousel-item img {
+    height: 500px;
+  }
+}
+
+/* =========================
+   Home / Offers / Categories
+========================= */
+.homePage .bigCard {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homePage .bigCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.homePage .image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+}
+
+@media (max-width: 768px) {
+  .homePage .image {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* =========================
+   Product List
+========================= */
+.card1 {
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card1 img {
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .card1 img {
+    height: 130px;
+  }
+}
+
+/* Responsive grid */
+.col-6 { width: 50%; }
+@media (min-width: 768px) {
+  .col-md-4 { width: 33.33%; }
+}
+@media (min-width: 992px) {
+  .col-lg-3 { width: 25%; }
+}
+
+/* =========================
+   Cart Page
+========================= */
+.cartItem img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .cartSummary {
+    margin-top: 20px;
+  }
+}
+
+/* =========================
+   Login Page
+========================= */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 15px;
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  transition: border-color 0.3s;
+}
+
+.inputGroup input:focus {
+  border-color: #0d6efd;
+  outline: none;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+@media (max-width: 576px) {
+  .loginCard {
+    padding: 20px;
+  }
+  .title {
+    font-size: 1.4rem;
+  }
+}
+
+/* =========================
+   Footer
+========================= */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer h3, .footer h5 {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+}

@@ -1,0 +1,21 @@
+.cartTitle {
+  font-weight: bold;
+  color: #333;
+}
+
+.cartItem {
+  transition: transform 0.2s ease-in-out; 
+}
+
+.cartItem:hover {
+  transform: scale(1.02);
+}
+
+.cartSummary {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+.container1{
+   min-height: 100vh;
+}
+
