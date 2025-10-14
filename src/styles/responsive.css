@@ -1,6 +1,6 @@
-/* =========================
-   Global Styles
-========================= */
+
+   /* Global Styles */
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -23,9 +23,9 @@ h1, h2, h3 {
   h3 { font-size: 1.3rem; }
 }
 
-/* =========================
-   Navigation
-========================= */
+
+   /* Navigation */
+
 .navBar {
   display: flex;
   justify-content: space-between;
@@ -104,13 +104,13 @@ h1, h2, h3 {
   }
 }
 
-/* =========================
-   Carousel
-========================= */
+
+  /* Carousel */
+
 .carousel-item img {
   width: 100%;
-  height: 100px;
-  object-fit: cover;
+  /* height: 100px; */
+  object-fit:contain;
 }
 
 @media (min-width: 768px) {
@@ -119,9 +119,9 @@ h1, h2, h3 {
   }
 }
 
-/* =========================
-   Home / Offers / Categories
-========================= */
+
+   /* Home / Offers / Categories */
+
 .homePage .bigCard {
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -146,9 +146,8 @@ h1, h2, h3 {
   }
 }
 
-/* =========================
-   Product List
-========================= */
+/* Product List */
+
 .card1 {
   border-radius: 10px;
   padding: 10px;
@@ -181,9 +180,9 @@ h1, h2, h3 {
   .col-lg-3 { width: 25%; }
 }
 
-/* =========================
-   Cart Page
-========================= */
+
+   /* Cart Page */
+
 .cartItem img {
   width: 100%;
   height: auto;
@@ -196,9 +195,9 @@ h1, h2, h3 {
   }
 }
 
-/* =========================
-   Login Page
-========================= */
+
+   /* Login Page */
+
 .wrapper {
   display: flex;
   justify-content: center;
@@ -246,9 +245,9 @@ h1, h2, h3 {
   }
 }
 
-/* =========================
-   Footer
-========================= */
+
+   /* Footer */
+
 .footer {
   background-color: #222;
   color: white;
