@@ -1,6 +1,9 @@
 import styles from '../styles/home.module.css'
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from "react-router-dom";
+import { setCategory } from "../redux/CategorySlice";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 
 const offers = [
@@ -9,7 +12,17 @@ const offers = [
   { id: 3, title: "Free Shipping above ₹1999", desc: "Select pin codes" , image:"https://png.pngtree.com/recommend-works/png-clipart/20250101/ourmid/pngtree-orange-delivery-man-on-motorcycle-png-image_15017922.png" },
 ];
 
+
+
 function Home(){
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+  const handleCategoryClick = (category) => {
+      dispatch(setCategory(category));
+      navigate("/products");
+  }
     return(
         <div className={styles.homePage}>
             <Carousel className="mb-5  shadow-lg mt-5 m-4">
@@ -48,22 +61,26 @@ function Home(){
         <div className="row">
           <div className="col-md-3">
             <div className="card p-3 text-center">
-              <Link className={styles.link} to="/products">Electronics</Link>
+              {/* <Link className={styles.link} onClick={() => handleCategoryClick("electronics")}>Electronics</Link> */}
+              <span className={styles.link} onClick={() => handleCategoryClick("electronics")}>Electronics</span>
             </div>
           </div>
           <div className="col-md-3">
             <div className="card p-3 text-center">
-              <Link className={styles.link} to="/products">Clothing</Link>
+              {/* <Link className={styles.link} to="/products">Clothing</Link> */}
+               <span className={styles.link} onClick={() => handleCategoryClick("men's clothing")}>Men's Clothing</span>
             </div>
           </div>
           <div className="col-md-3">
             <div className="card p-3 text-center">
-              <Link className={styles.link} to="/products">Home</Link>
+              {/* <Link className={styles.link} to="/products">Home</Link> */}
+               <span className={styles.link} onClick={() => handleCategoryClick("women's clothing")}>women's Clothing</span>
             </div>
           </div>
           <div className="col-md-3">
             <div className="card p-3 text-center">
-              <Link className={styles.link} to="/products">Sports</Link>
+              {/* <Link className={styles.link} to="/products">Sports</Link> */}
+               <span className={styles.link} onClick={() => handleCategoryClick("jewelery")}>Jewelery</span>
             </div>
           </div>
         </div>
