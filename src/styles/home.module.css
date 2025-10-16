@@ -19,3 +19,9 @@
 .seeAll:hover {
   color: #0a58ca;
 }
+.title1{
+  background-color: red;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: larger;
+}
