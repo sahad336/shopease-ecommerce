@@ -86,15 +86,15 @@ function Home(){
         </div>
       </section>
 
-      <section className=" m-4">
+      <section className="m-4 offer-section">
         <h4>Today's Offers</h4>
         <div className="row">
           {offers.map((o) => (
             <div key={o.id} className="col-md-4">
               <div className={`card p-3 text-center mb-2 ${styles.bigCard}`}>
                 <img src={o.image} className={styles.image}/>
-                <h6>{o.title}</h6>
-                <p>{o.desc}</p>
+                <h6 className={styles.title1}>{o.title}</h6>
+                <p className='description'>{o.desc}</p>
               </div>
             </div>
           ))}
